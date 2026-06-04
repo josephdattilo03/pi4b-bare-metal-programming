@@ -89,7 +89,6 @@
 ### My Hardware Setup
 TODO if necessary
 
-```
 
 ---
 
@@ -98,7 +97,6 @@ TODO if necessary
 ### OS & System Configuration
 
 (paste output here)
-```
 
 ### Software & Tools Installed - TODO change this as needed
 
