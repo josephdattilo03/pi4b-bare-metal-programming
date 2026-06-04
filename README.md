@@ -23,7 +23,6 @@
 7. [Challenges & Troubleshooting](#7-challenges--troubleshooting)
 8. [Resources & References](#8-resources--references)
 9. [Final Reflection & Outcomes](#9-final-reflection--outcomes)
-10. [Supervisor Sign-Off](#10-supervisor-sign-off)
 
 ---
 
