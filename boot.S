@@ -1,5 +1,6 @@
 .section ".text.boot"
 
+// symbol that allows _start to be read by other files
 .global _start
 
 _start:

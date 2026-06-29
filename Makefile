@@ -1,5 +1,7 @@
 CFILES = $(wildcard *.c)
-OFILES = $(CFILES:.c=.o)
+# All .S sources except boot.S (boot.o must be linked first, handled below).
+SFILES = $(filter-out boot.S,$(wildcard *.S))
+OFILES = $(CFILES:.c=.o) $(SFILES:.S=.o)
 GCCFLAGS = -Wall -O2 -ffreestanding -nostdinc -nostdlib -nostartfiles
 GCCPATH = /opt/homebrew/bin
 
@@ -7,6 +9,9 @@ all: clean kernel8.img
 
 boot.o: boot.S
 	$(GCCPATH)/aarch64-none-elf-gcc $(GCCFLAGS) -c boot.S -o boot.o
+
+%.o: %.S
+	$(GCCPATH)/aarch64-none-elf-gcc $(GCCFLAGS) -c $< -o $@
 
 %.o: %.c
 	$(GCCPATH)/aarch64-none-elf-gcc $(GCCFLAGS) -c $< -o $@
